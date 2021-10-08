@@ -16,12 +16,14 @@ public class Playermovement : MonoBehaviour
 
     private BoxCollider2D boxCollider;
     private Vector3 moveDelta;
+    
 
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
 
     }
+    
 
 
     void Update()
@@ -43,6 +45,6 @@ public class Playermovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
 
         //make this thing move
-        transform.Translate(moveDelta * Time.deltaTime);
+        transform.Translate(moveDelta * Time.deltaTime*10f);
     }
 }
