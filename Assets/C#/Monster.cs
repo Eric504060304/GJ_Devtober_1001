@@ -6,6 +6,7 @@ public class Monster : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
+    public float killednumber;
     public Transform player;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -14,6 +15,25 @@ public class Monster : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+
+        if (killednumber == 25)
+        {
+            moveSpeed = 15f;
+        }
+        else if (killednumber == 50)
+        {
+            moveSpeed = 25f;
+        }
+        else  if (killednumber == 75)
+        {
+            moveSpeed = 30f;
+        }
+        else
+        {
+            
+        }
+                
+               
     }
 
     // Update is called once per frame

@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
 
+    private void Start()
+    {
+        Physics2D.IgnoreLayerCollision(6, 9);
+    }
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
