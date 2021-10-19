@@ -5,12 +5,14 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
-    private float spawnRadius = 10f, time = 1.5f;
+    private float spawnRadius = 7f, time = 1.5f;
 
     public GameObject[] enemies;
     void Start()
     {
+
         StartCoroutine(SpawnAnEnemy());
+        
     }
 
     IEnumerator SpawnAnEnemy()
