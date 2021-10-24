@@ -4,14 +4,25 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [Header("打到物體效果")]
     public GameObject hitEffect;
-    private const int attack = 1;
+    public Rigidbody2D rb;
+    public int damage = 50;
+
     
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D hitInfo)
     {
-        GameObject effect =  Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 0.1f);
+
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+        if(enemy != null)
+        {
+            enemy.TakeDamage(damage);
+        }
+        GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 0.5f);
         Destroy(gameObject);
+    
+        
     }
 }

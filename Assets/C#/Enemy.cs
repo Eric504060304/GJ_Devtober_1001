@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public bool isFreeze = false;
+    public int health = 150;
 
-    private IEnumerator Freeze(float freezeTIme)
+    public GameObject death;
+
+    public void TakeDamage(int damage)
     {
-        isFreeze = true;
-        yield return new WaitForSeconds(freezeTIme);
-        isFreeze = false;
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Instantiate(death, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

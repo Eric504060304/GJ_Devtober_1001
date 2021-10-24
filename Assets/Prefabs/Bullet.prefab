@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6037203297813943192}
   m_Layer: 6
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,3 +165,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 5679747919888765825, guid: b88046973b9ba574fb8f227c6c805295, type: 3}
+  damage: 1
