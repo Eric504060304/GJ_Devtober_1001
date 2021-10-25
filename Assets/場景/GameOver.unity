@@ -803,7 +803,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1052311033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87b0ea2626d19c0469895fd199338be3, type: 3}
+  m_Script: {fileID: 11500000, guid: f306527f10fa27745b1f281d0c5d59bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   time_UI: {fileID: 1052311035}
@@ -1400,7 +1400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b0ea2626d19c0469895fd199338be3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time_UI: {fileID: 0}
 --- !u!1 &1906931842
 GameObject:
   m_ObjectHideFlags: 0
