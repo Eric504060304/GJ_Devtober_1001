@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: "Assets/\u5834\u666F/Game.unity"
     guid: 9bf7d451010e42441a20e28742e70893
   - enabled: 1
+    path: "Assets/\u5834\u666F/YouEscape.unity"
+    guid: f2984f65eb429794ebbc3844a2c5ed4f
+  - enabled: 1
     path: "Assets/\u5834\u666F/GameOver.unity"
     guid: 7630deb62e59f8540be892545a61c116
   m_configObjects: {}

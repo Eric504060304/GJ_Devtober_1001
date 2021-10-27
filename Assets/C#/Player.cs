@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    [Header("玩家移動速度")]
     public float speed = 5f;
-
+    
     public Rigidbody2D rig;
+
     public Camera cam;
+
+    public int health = 100;
+
 
     Vector2 movement;
     Vector2 mousePos;
@@ -15,6 +21,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         Physics2D.IgnoreLayerCollision(6, 9);
+        
     }
     void Update()
     {
@@ -31,4 +38,15 @@ public class Player : MonoBehaviour
 
         rig.rotation = angle;
     }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Application.LoadLevel("GameOver");
+        }
+    }
+    
+
+
 }
