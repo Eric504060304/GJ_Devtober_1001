@@ -24,15 +24,19 @@ public class Enemy : MonoBehaviour
         Instantiate(death, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
-    private void OnTriggerEnter2D(Collider2D hit)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.tag == "Enemy" && hit.GetComponent<Collider2D>().tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            
+
             //敵機子彈打到玩家以後，找到場景上命名為GM的物件，找到GM腳本並呼叫HurtPlayer function
             GameObject.Find("GM").GetComponent<GM>().HurtPlayer();
             //敵機子彈要消失
             Destroy(gameObject);
         }
+    }
+    private void OnTriggerEnter2D(Collider2D hit)
+    {
+        
     }
 }
