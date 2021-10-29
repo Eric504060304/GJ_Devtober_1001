@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
 
     public int health = 100;
 
+    
+
+   
 
     Vector2 movement;
     Vector2 mousePos;
@@ -40,6 +43,7 @@ public class Player : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        
         health -= damage;
         if (health <= 0)
         {

@@ -5,27 +5,21 @@ using UnityEngine.UI;
 
 public class ScoreCode : MonoBehaviour
 {
+    //だ计把计
+
     public static int Score;
+
+    //ゅUI
 
     public Text ShowScore;
 
-    private void Start()
-    {
-        Score = 0;
-    }
+    void Update()
 
-    private void Update()
     {
-        ShowScore.text ="Killed: "+ Score.ToString();
-        PlayerWintheGame();
-    }
-    void PlayerWintheGame()
-    {
-        if (Score == 30)
-        {
-            Application.LoadLevel("YouEscape");
-        }
-    }
-    
 
+        //琵UIゅ籔だ计˙
+
+        ShowScore.text = "Killed: "+Score.ToString();
+
+    }
 }

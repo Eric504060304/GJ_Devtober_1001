@@ -8,11 +8,13 @@ public class Enemy : MonoBehaviour
 
     public GameObject death;
 
+    
 
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        
+        
         if (health <= 0)
         {
             Die();
@@ -21,7 +23,9 @@ public class Enemy : MonoBehaviour
     }
     void Die()
     {
+        
         Instantiate(death, transform.position, Quaternion.identity);
+        
         Destroy(gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -33,10 +37,9 @@ public class Enemy : MonoBehaviour
             GameObject.Find("GM").GetComponent<GM>().HurtPlayer();
             //敵機子彈要消失
             Destroy(gameObject);
+            
         }
     }
-    private void OnTriggerEnter2D(Collider2D hit)
-    {
-        
-    }
+   
+   
 }
