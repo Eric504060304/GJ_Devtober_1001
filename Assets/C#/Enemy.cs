@@ -11,8 +11,12 @@ public class Enemy : MonoBehaviour
     public int damage = 50;
 
     public AudioSource deathSound;
-    
 
+
+    private void Start()
+    {
+        deathSound = GetComponent<AudioSource>();
+    }
 
     public void TakeDamage(int damage)
     {
@@ -20,16 +24,19 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            
             Die();
-            deathSound.Play();
             ScoreCode.Score = ScoreCode.Score + 1;
         }
+        
     }
     void Die()
     {
-        
+
         Instantiate(death, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(gameObject,0.5f);
+        
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -39,9 +46,9 @@ public class Enemy : MonoBehaviour
             //敵人子彈打到玩家以後，找到場景上命名為GM的物件，找到GM腳本並呼叫HurtPlayer function
             GameObject.Find("GM").GetComponent<GM>().HurtPlayer();
             Destroy(gameObject);
-            
+
         }
     }
-   
-   
+
+
 }

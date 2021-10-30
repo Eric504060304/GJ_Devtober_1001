@@ -7,7 +7,7 @@ public class GameOver : MonoBehaviour
 {
     [Header("經過的時間")]
     private int Time = 10;
-    private AudioSource aud;
+    
     private void Update()
     {
         

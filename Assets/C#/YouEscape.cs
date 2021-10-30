@@ -6,9 +6,12 @@ public class YouEscape : MonoBehaviour
 {
     [Header("經過的時間")]
     private int Time = 10;
+    
 
-
-
+    private void Update()
+    {
+        
+    }
 
 
 
