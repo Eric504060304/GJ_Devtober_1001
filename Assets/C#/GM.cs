@@ -13,9 +13,10 @@ public class GM : MonoBehaviour
     float TotalScriptHp;
     [Header("玩家血量條")]
     public Image PlayerHPBar;
+    
 
-    
-    
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class GM : MonoBehaviour
 
         //程式中玩家的血量
         TotalScriptHp = TotalPlayerHP;
+        
     }
 
     // Update is called once per frame
@@ -38,7 +40,7 @@ public class GM : MonoBehaviour
         //TotalScriptHP = TotalScriptHP-HurtPlayerHP
         TotalScriptHp -= HurtPlayerHP;
         PlayerHPBar.fillAmount = TotalScriptHp / TotalPlayerHP;
-
+        
         if (TotalScriptHp <= 0)
         {
             //跳轉至Gameover

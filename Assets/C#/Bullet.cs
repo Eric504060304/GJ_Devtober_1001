@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public GameObject hitEffect;
     public Rigidbody2D rb;
     public int damage = 50;
+    
 
 
 
@@ -33,6 +34,7 @@ public class Bullet : MonoBehaviour
         if(enemy != null)
         {
             enemy.TakeDamage(damage);
+            
         }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effect, 0.1f);

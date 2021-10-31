@@ -6,36 +6,41 @@ public class Enemy : MonoBehaviour
 {
     public int health = 100;
 
-    public GameObject death;
+    public GameObject deathVFX;
 
     public int damage = 50;
 
-    public AudioSource deathSound;
+   
+
+    
 
 
     private void Start()
     {
-        deathSound = GetComponent<AudioSource>();
+       
     }
 
     public void TakeDamage(int damage)
     {
+        
+         
+         health -= damage;
 
-        health -= damage;
         if (health <= 0)
         {
             
             Die();
+            
             ScoreCode.Score = ScoreCode.Score + 1;
         }
         
     }
     void Die()
     {
-
-        Instantiate(death, transform.position, Quaternion.identity);
-        Destroy(gameObject,0.5f);
         
+        Instantiate(deathVFX, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -49,6 +54,6 @@ public class Enemy : MonoBehaviour
 
         }
     }
-
+    
 
 }

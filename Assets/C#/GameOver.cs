@@ -7,10 +7,10 @@ public class GameOver : MonoBehaviour
 {
     [Header("經過的時間")]
     private int Time = 10;
-    
-    private void Update()
+    public AudioSource aud;
+    private void Awake()
     {
-        
+        aud.Play();
     }
 
 

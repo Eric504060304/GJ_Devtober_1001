@@ -167,3 +167,4 @@ MonoBehaviour:
   hitEffect: {fileID: 5679747919888765825, guid: b88046973b9ba574fb8f227c6c805295, type: 3}
   rb: {fileID: 8279971794018781242}
   damage: 50
+  takeDamageSound: {fileID: 5142373878809534207, guid: dfdc3da18e22b3143ae0b2681f6bde38, type: 3}

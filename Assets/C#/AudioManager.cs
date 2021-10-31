@@ -4,20 +4,19 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    
-    public static AudioManager instance;
-    public AudioSource audioSource;
-    [SerializeField]
-    private AudioClip Monsterdie, monsterPain, playerhurt;
+
+
+    static AudioManager current;
+    public AudioClip monsterDie, monsterPain, playerHurt;
+    AudioSource enemyDie, enemyPain, playergetgurt;
 
     private void Awake()
     {
-        instance = this;
+        current = this;
+        DontDestroyOnLoad(gameObject);
+        enemyDie = gameObject.GetComponent<AudioSource>();
+        enemyPain = gameObject.GetComponent<AudioSource>();
+        playergetgurt = gameObject.GetComponent<AudioSource>();
     }
 
-    public void MonsterDie()
-    {
-        audioSource.clip = Monsterdie;
-        audioSource.Play();
-    }
 }
