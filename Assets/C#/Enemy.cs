@@ -32,6 +32,10 @@ public class Enemy : MonoBehaviour
             Die();
             
             ScoreCode.Score = ScoreCode.Score + 1;
+            if (ScoreCode.Score == 30)
+            {
+                Application.LoadLevel("YouEscape");
+            }
         }
         
     }

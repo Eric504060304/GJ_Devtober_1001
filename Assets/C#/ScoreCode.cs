@@ -11,6 +11,11 @@ public class ScoreCode : MonoBehaviour
 
     //宣告文字UI
 
+    private void Start()
+    {
+        Score = 0;
+    }
+
     public Text ShowScore;
 
     void Update()
@@ -19,7 +24,9 @@ public class ScoreCode : MonoBehaviour
 
         //讓UI文字與分數同步
 
-        ShowScore.text = "Killed: "+Score.ToString();
+        ShowScore.text = "Killed: "+ Score.ToString();
+        
 
     }
+    
 }
